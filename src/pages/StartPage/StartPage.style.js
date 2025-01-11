@@ -40,3 +40,5 @@ export const ContentWrapper = styled.div`
   font-size: 25px;
   line-height: 1.4;
 `;
+
+export const Description = styled.div``;
