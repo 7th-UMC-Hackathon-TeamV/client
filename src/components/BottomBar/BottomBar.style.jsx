@@ -13,6 +13,7 @@ export const ContentWrapper = styled.button`
   align-items: center;
   padding: 10px 20px;
   gap: 4px;
+  flex: 1;
 `;
 
 export const ContentIcon = styled.img`
