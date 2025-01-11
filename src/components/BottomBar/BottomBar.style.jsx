@@ -8,6 +8,7 @@ export const BottomBar = styled.div`
 
 export const ContentWrapper = styled.button`
   display: flex;
+  width: 105px;
   flex-direction: column;
   align-items: center;
   padding: 10px 20px;
