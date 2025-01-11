@@ -10,7 +10,6 @@ export const CardContainer = styled.div`
   position: relative;
   width: 85%;
   height: 160px;
-  background: #dfdfdf;
   border-radius: 8px;
   display: flex;
   justify-content: flex-start;
