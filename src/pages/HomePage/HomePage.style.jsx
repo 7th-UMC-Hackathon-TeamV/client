@@ -11,7 +11,10 @@ export const NewsSectionWrapper = styled.div`
   gap: 24px;
 `;
 
-export const NewsSection = styled.div``;
+export const NewsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const NewsAlertBoxWrapper = styled.div`
   display: flex;

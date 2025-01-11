@@ -1,5 +1,7 @@
 import { BottomBar, NewsAlertBox, PageLayout } from "../../components";
 import { NewsHeader } from "../../components/NewsHeader";
+import HotNewsCard from "../../components/NewsCard/HotNewsCard";
+import NewsCardList from "../../components/NewsCard/NewsCardList";
 import * as S from "./HomePage.style";
 
 const HomePage = () => {
@@ -20,10 +22,12 @@ const HomePage = () => {
 
         <S.NewsSection>
           <NewsHeader title="어제의 핫! 온에어" />
+          <HotNewsCard />
         </S.NewsSection>
 
         <S.NewsSection>
           <NewsHeader title="어제의 온에어" />
+          <NewsCardList />
         </S.NewsSection>
       </S.NewsSectionWrapper>
     </PageLayout>
