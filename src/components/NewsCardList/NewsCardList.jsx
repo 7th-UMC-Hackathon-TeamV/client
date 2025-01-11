@@ -1,8 +1,7 @@
-import * as S from "./NewsCardList.style.js";
+import * as S from "./NewsCardList.style.jsx";
 import { NewsCard } from "../../components";
 
 const NewsCardList = () => {
-  // 예시 데이터 배열
   const newsData = [
     {
       title:
@@ -27,14 +26,18 @@ const NewsCardList = () => {
 
   return (
     <S.CardListWrapper>
-      {newsData.map((news, index) => (
-        <NewsCard
-          key={index}
-          title={news.title}
-          type={news.type}
-          backgroundImage={news.backgroundImage}
-        />
-      ))}
+      {newsData.length > 0 ? (
+        newsData.map((news, index) => (
+          <NewsCard
+            key={index}
+            title={news.title}
+            type={news.type}
+            backgroundImage={news.backgroundImage}
+          />
+        ))
+      ) : (
+        <S.EmptyMessage>당신의 뉴스를 들려주세요</S.EmptyMessage>
+      )}
     </S.CardListWrapper>
   );
 };

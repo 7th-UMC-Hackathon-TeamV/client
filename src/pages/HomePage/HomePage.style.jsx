@@ -4,6 +4,7 @@ export const HomePage = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-bottom: 70px;
 `;
 
 export const NewsSectionWrapper = styled.div`

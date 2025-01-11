@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const PageContainer = styled.div`
   width: 100%;
-  /* height: 300px; */
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -15,16 +14,13 @@ export const HotCardContainer = styled.div`
   background: #dfdfdf;
   border-radius: 8px;
   display: flex;
-  justify-content: flex-start;
   position: relative;
-  /* margin-top: 50px; */
 `;
 
 export const HotIcon = styled.div`
   display: flex;
-  justify-content: left;
-  margin-top: 6px;
-  padding-left: 14px;
+  align-items: center;
+  justify-content: center;
   width: 80px;
   height: 35px;
   border-radius: 20px;
@@ -37,11 +33,8 @@ export const HotIcon = styled.div`
 export const HOTLabel = styled.p`
   color: white;
   font-size: 22px;
-  font-weight: 1000;
-  display: flex;
-  align-items: center;
+  font-weight: bold;
   text-align: center;
-  justify-content: center;
 `;
 
 export const HotTitleWrapper = styled.div`
@@ -64,9 +57,6 @@ export const HotTitle = styled.p`
   color: white;
   font-size: 24px;
   font-weight: 800;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,4 +67,17 @@ export const HotType = styled.div`
   width: 18px;
   height: 100%;
   margin-right: 15px;
+`;
+
+export const EmptyContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+`;
+
+export const EmptyMessage = styled.p`
+  font-size: 20px;
+  color: #999;
+  font-weight: bold;
 `;
