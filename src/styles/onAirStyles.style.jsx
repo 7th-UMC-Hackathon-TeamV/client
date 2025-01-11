@@ -68,35 +68,12 @@ export const onAirStyles = css`
   }
 
   :root {
-    /* 아래는 샘플이고, 수정 필요 */
-    /* Primary color */
-    --blue-100: #f4f9ff;
-    --blue-200: #bddbff;
-    --blue-300: #2c8dff;
-    --blue-400: #0075ff;
-    --blue-500: #2e69ff;
-
     /* Gray Color */
-    --gray-100: #f0f0f0;
-    --gray-200: #d9d9d9;
-    --gray-300: #636363;
-    --gray-400: #212121;
-
-    /* 최신 */
-    --blue-0: #2f7cef;
-    --blue-4: #accdff;
-    --blue-5: #edf5ff;
-
-    --green-0: #5bfb67;
-
-    --DG-1: #6b6b6b;
-    --DG-2: #818181;
-
-    --LG-3: #f2f2f2;
-    --LG-4: #f8f8f8;
-
-    --White: #fff;
-    --Black-2: #323232;
-    --Black-0: #000;
+    --gray-100: #FFFFFF;
+    --gray-200: #F5F5F5;
+    --gray-300: #D9D9D9;
+    --gray-400: #A8A8A8;
+    --gray-500: #222222;
+    
   }
 `;
