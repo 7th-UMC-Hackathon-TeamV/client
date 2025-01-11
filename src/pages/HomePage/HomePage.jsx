@@ -1,4 +1,4 @@
-import BottomBar from "../../components/BottomBar/BottomBar";
+import { BottomBar } from "../../components";
 import * as S from "./HomePage.style";
 
 const HomePage = () => {
