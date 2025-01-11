@@ -20,7 +20,7 @@ const HotNewsCard = ({ title, type, backgroundImage }) => {
         }}
       >
         <S.HotIcon>
-          <S.HOTLabel>HOT!</S.HOTLabel>
+          <S.HOTLabel>속보!</S.HOTLabel>
         </S.HotIcon>
         <S.HotTitleWrapper>
           <S.HotType type={type}></S.HotType>

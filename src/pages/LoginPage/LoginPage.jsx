@@ -1,8 +1,8 @@
 import {
   BottomBar,
   PageLayout,
-  LogoHeader,
   NewsHeader,
+  LogoHeader,
 } from "../../components";
 import * as S from "./LoginPage.style";
 import { useState } from "react";
