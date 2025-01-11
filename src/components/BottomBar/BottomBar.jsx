@@ -11,7 +11,7 @@ const BottomBar = () => {
         <S.ContentText>홈</S.ContentText>
       </S.ContentWrapper>
 
-      <S.ContentWrapper onClick={() => navigator("/news")}>
+      <S.ContentWrapper onClick={() => navigator("/update-news")}>
         <S.ContentIcon src="/svgs/pencil.svg" />
         <S.ContentText>작성</S.ContentText>
       </S.ContentWrapper>
