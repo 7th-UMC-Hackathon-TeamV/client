@@ -55,7 +55,12 @@ const HomePage = () => {
           </S.NewsSection>
 
           <S.NewsSection>
-            <NewsHeader title="실시간 온에어" />
+            <S.HeaderWrapper>
+              <NewsHeader title="실시간 온에어" />
+              <S.NewsHeaderDescription>
+                (매일 18:00마다 업데이트됩니다.)
+              </S.NewsHeaderDescription>
+            </S.HeaderWrapper>
             <NewsCardList />
           </S.NewsSection>
         </S.NewsSectionWrapper>
