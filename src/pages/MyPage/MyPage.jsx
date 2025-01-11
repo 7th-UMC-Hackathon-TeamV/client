@@ -34,7 +34,7 @@ const MyPage = () => {
   return (
     <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.MyPage>
-        <S.Gap $gap={'80px'} />
+        <S.Gap $gap={'20px'} />
         <S.PageTitleWrapper>
           <S.PageTitle>
             오늘 6시 공개 예정!
