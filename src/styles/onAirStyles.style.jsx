@@ -69,11 +69,22 @@ export const onAirStyles = css`
 
   :root {
     /* Gray Color */
-    --gray-100: #FFFFFF;
-    --gray-200: #F5F5F5;
-    --gray-300: #D9D9D9;
-    --gray-400: #A8A8A8;
+    --gray-100: #ffffff;
+    --gray-200: #f5f5f5;
+    --gray-300: #d9d9d9;
+    --gray-400: #a8a8a8;
     --gray-500: #222222;
-    
+
+    /* Font Sizes */
+    --font-title-20: 20px;
+    --font-title-18: 18px;
+    --font-title-16: 16px;
+    --font-title-14: 14px;
+
+    --font-body-16: 16px;
+    --font-body-14: 14px;
+
+    --font-caption-13: 13px;
+    --font-caption-13: 13px;
   }
 `;
