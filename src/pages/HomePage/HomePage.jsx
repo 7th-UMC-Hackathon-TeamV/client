@@ -6,21 +6,21 @@ import {
   NewsHeader,
   HotNewsCard,
   NewsCardList,
+  LogoHeader
 } from "../../components";
 import * as S from "./HomePage.style";
-import Slider from "react-slick"; // react-slick import
+import Slider from "react-slick";
 
 const HomePage = () => {
-  const USER_ID_LIST = ["v0111", "v0132", "올라"]; // 추후 삭제하고 API 연동 통해서 userID 가져와야함
+  const USER_ID_LIST = ["v0111", "v0132", "올라"]; 
 
   const hotNewsData = [
     { title: "News 1", type: "Type A", backgroundImage: "image1.jpg" },
     { title: "News 2", type: "Type B", backgroundImage: "image2.jpg" },
     { title: "News 3", type: "Type C", backgroundImage: "image3.jpg" },
-    // 추가 데이터
   ];
 
-  // Slider 설정
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -30,7 +30,7 @@ const HomePage = () => {
   };
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.HomePage>
         <S.NewsAlertBox>
           <NewsHeader title="On Air Box" />

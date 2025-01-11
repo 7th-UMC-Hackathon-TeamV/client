@@ -1,4 +1,4 @@
-import { BottomBar, NewsHeader, PageLayout } from "../../components";
+import { BottomBar, PageLayout, LogoHeader } from "../../components";
 import * as S from "./LoginPage.style";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ const LoginPage = () => {
   const [passwd, setPasswd] = useState("");
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.LoginPage>
         <S.LoginTitleWrapper>
           <NewsHeader title="로그인 후에 나만의 뉴스를 작성해주세요." />

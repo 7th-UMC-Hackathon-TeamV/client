@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BottomBar, PageLayout } from "../../components";
+import { BottomBar, PageLayout,LogoHeader } from "../../components";
 import * as S from "./NewsPage.style";
 import { useNavigate } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const NewsPage = () => {
   }
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.NewsPage>
         <S.Back src="/svgs/back.svg" onClick={() => navigate('/home')} />
         <S.NewsContents>
