@@ -7,11 +7,13 @@ export const NewsCard = styled.div`
 `;
 
 export const CardContainer = styled.div`
+  position: relative;
+  width: 85%;  
+  height: 160px;
+  background: #dfdfdf;
+  border-radius: 8px;
   display: flex;
   justify-content: flex-start;
-  position: relative;
-  width: 85%;
-  height: 160px;
   padding: 8px;
   background: #dfdfdf;
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
@@ -52,3 +54,11 @@ export const Title = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
+
+export const XButton = styled.img`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+`
