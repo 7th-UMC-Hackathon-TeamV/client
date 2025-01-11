@@ -7,6 +7,7 @@ import {
 } from "../../components";
 import * as S from "./LoginPage.style";
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 const LoginPage = () => {
   const [disabled, setDisabled] = useState(true);
@@ -24,6 +25,20 @@ const LoginPage = () => {
       setDisabled(true);
     }
   }, [id, passwd])
+
+  const loginHandler = async () => {
+    const response = await axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}/api/${groupKey}/users/login`,
+      {
+        username: id,
+        password: passwd,
+      }
+    )
+    const data = response.data
+
+    localStorage.setItem('username', data.result.username)
+
+    navigate(`/${groupKey}`);
+  }
 
   return (
     <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
@@ -54,7 +69,7 @@ const LoginPage = () => {
             <S.TextNum>{passwd.length}/20</S.TextNum>
           </S.InputDiv>
           <S.Gap $gap={"16px"} />
-          <S.LoginButton disabled={disabled} onClick={() => navigate(`/mypage/${groupKey}`)}>로그인</S.LoginButton>
+          <S.LoginButton disabled={disabled} onClick={() => loginHandler()}>로그인</S.LoginButton>
         </S.InputWrapper>
       </S.LoginPage>
     </PageLayout>
