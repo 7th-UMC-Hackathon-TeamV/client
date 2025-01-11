@@ -72,5 +72,6 @@ export const LoginButton = styled.button`
 
   &:disabled{
     background-color: var(--gray-300);
+    color: var(--gray-400);
   }
 `

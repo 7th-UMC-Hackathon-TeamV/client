@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const LoginPage = () => {
 
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(true);
 
   const [id, setId] = useState('');
   const [passwd, setPasswd] = useState('');
