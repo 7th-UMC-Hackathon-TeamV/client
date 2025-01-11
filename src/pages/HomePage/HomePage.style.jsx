@@ -24,7 +24,19 @@ export const NewsAlertBox = styled.div`
 export const NewsSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 6px;
+  margin-top: 16px;
+`;
+
+export const HeaderWrapper = styled.div`
+  display: flex;
+`;
+
+export const NewsHeaderDescription = styled.span`
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: gray;
 `;
 
 export const NewsAlertBoxWrapper = styled.div`
