@@ -5,7 +5,7 @@ import * as S from "./UpdateNewsPage.style";
 const UpdateNewsPage = () => {
   const [selected, setSelected] = useState(null);
   const [isHotNews, setIsHotNews] = useState(false);
-  const [uploadedImage, setUploadedImage] = useState(null); // 업로드된 이미지 상태 관리
+  const [uploadedImage, setUploadedImage] = useState(null);
 
   const handleButtonClick = (type) => {
     setSelected(type);
@@ -20,7 +20,7 @@ const UpdateNewsPage = () => {
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        setUploadedImage(reader.result); // 업로드된 이미지를 상태로 저장
+        setUploadedImage(reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -46,7 +46,18 @@ const UpdateNewsPage = () => {
         />
         <S.ImageUploadArea>
           {uploadedImage ? (
-            <S.ImagePreview src={uploadedImage} alt="Uploaded Preview" />
+            <>
+              <S.ImagePreview src={uploadedImage} alt="Uploaded Preview" />
+              <S.ChangeImageButton>
+                이미지 변경
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  style={{ display: "none" }}
+                />
+              </S.ChangeImageButton>
+            </>
           ) : (
             <S.UploadLabel>
               이미지 업로드

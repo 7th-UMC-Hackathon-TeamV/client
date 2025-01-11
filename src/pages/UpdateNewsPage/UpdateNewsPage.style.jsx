@@ -23,7 +23,6 @@ export const Badge = styled.div`
 `;
 
 export const TitleInput = styled.input`
-  width: 100%;
   padding: 8px;
   font-size: 16px;
   border: none;
@@ -37,7 +36,7 @@ export const TitleInput = styled.input`
 
 export const ImageUploadArea = styled.div`
   width: 100%;
-  height: 150px;
+  height: 160px;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -64,6 +63,19 @@ export const ImagePreview = styled.img`
   max-height: 100%;
   object-fit: cover;
   border-radius: 8px;
+`;
+
+export const ChangeImageButton = styled.label`
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #a8a8a8;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
 `;
 
 export const ButtonSelector = styled.div`
