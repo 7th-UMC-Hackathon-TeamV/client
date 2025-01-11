@@ -6,6 +6,8 @@ const UpdateNewsPage = () => {
   const [selected, setSelected] = useState(null);
   const [isHotNews, setIsHotNews] = useState(false);
   const [uploadedImage, setUploadedImage] = useState(null);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   const handleButtonClick = (type) => {
     setSelected(type);
@@ -26,6 +28,9 @@ const UpdateNewsPage = () => {
     }
   };
 
+  const isFormComplete =
+    title.trim() && uploadedImage && selected && content.trim();
+
   return (
     <PageLayout footer={<BottomBar />}>
       <S.UpdateNewsPage>
@@ -43,6 +48,8 @@ const UpdateNewsPage = () => {
         <S.TitleInput
           placeholder="제목을 입력하세요. (20자 이내)"
           maxLength={20}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <S.ImageUploadArea>
           {uploadedImage ? (
@@ -94,8 +101,10 @@ const UpdateNewsPage = () => {
         <S.ContentInput
           placeholder="본문을 입력하세요. (최대 1000자)"
           maxLength={1000}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
         />
-        <S.SubmitButton isActive={!!selected}>게시 예약하기</S.SubmitButton>
+        <S.SubmitButton isActive={isFormComplete}>게시 예약하기</S.SubmitButton>
       </S.UpdateNewsPage>
     </PageLayout>
   );
