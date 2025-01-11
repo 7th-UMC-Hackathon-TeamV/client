@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./NewsCard.style.js";
-import NewsCard from "./NewsCard";
+import { NewsCard } from "../../components";
 
 const NewsCardList = () => {
   // 예시 데이터 배열
