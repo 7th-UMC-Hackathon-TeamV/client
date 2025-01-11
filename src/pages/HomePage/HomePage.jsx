@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   BottomBar,
   NewsAlertBox,
@@ -6,20 +5,19 @@ import {
   NewsHeader,
   HotNewsCard,
   NewsCardList,
-  LogoHeader
+  LogoHeader,
 } from "../../components";
 import * as S from "./HomePage.style";
 import Slider from "react-slick";
 
 const HomePage = () => {
-  const USER_ID_LIST = ["v0111", "v0132", "올라"]; 
+  const USER_ID_LIST = ["v0111", "v0132", "올라"];
 
   const hotNewsData = [
     { title: "News 1", type: "Type A", backgroundImage: "image1.jpg" },
     { title: "News 2", type: "Type B", backgroundImage: "image2.jpg" },
     { title: "News 3", type: "Type C", backgroundImage: "image3.jpg" },
   ];
-
 
   const sliderSettings = {
     dots: true,
@@ -32,18 +30,18 @@ const HomePage = () => {
   return (
     <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.HomePage>
-        <S.NewsAlertBox>
+        {/* <S.NewsAlertBox>
           <NewsHeader title="On Air Box" />
           <S.NewsAlertBoxWrapper>
             {USER_ID_LIST.map((userId, index) => (
               <NewsAlertBox key={index} userId={userId} />
             ))}
           </S.NewsAlertBoxWrapper>
-        </S.NewsAlertBox>
+        </S.NewsAlertBox> */}
 
         <S.NewsSectionWrapper>
           <S.NewsSection>
-            <NewsHeader title="어제의 핫! 온에어" />
+            {/* <NewsHeader title="어제의 핫! 온에어" /> */}
             <Slider {...sliderSettings}>
               {hotNewsData.map((news, index) => (
                 <HotNewsCard
@@ -57,7 +55,7 @@ const HomePage = () => {
           </S.NewsSection>
 
           <S.NewsSection>
-            <NewsHeader title="어제의 온에어" />
+            <NewsHeader title="실시간 온에어" />
             <NewsCardList />
           </S.NewsSection>
         </S.NewsSectionWrapper>
