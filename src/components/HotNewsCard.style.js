@@ -46,33 +46,31 @@ export const HOTLabel = styled.p`
 export const HotTitleWrapper = styled.div`
   display: flex;
   width: 70%;
-  height: 23%;  // 부모 요소 높이 설정
+  height: 18%;
   position: absolute;
   left: 20px;
   bottom: 20px;
 `;
 
 export const HotTitleBox = styled.div`
-  display: -webkit-box;
+  display: flex;
   width: 100%;
-  height: 3em;
-  line-height: 1.5em;
+  height: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  white-space: normal;
-`;
-
+`
 
 export const HotTitle = styled.p`
   color: white;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 800;
   justify-content: center;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 `;
+
 
 export const HotType = styled.div`
   background: ${({ type }) => type === 'True' ? '#E22c2f' : '#18309F'};
