@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { BottomBar, PageLayout } from "../../components";
 import * as S from "./NewsPage.style";
+import { useNavigate } from "react-router-dom";
 
 const NewsPage = () => {
 
   const titleColor = 'red';
-  
+  const navigate = useNavigate();
+
   const [likeCount, setLikeCount] = useState(0);
   const [isLike, setIsLike] = useState(false);
 
@@ -22,7 +24,7 @@ const NewsPage = () => {
   return (
     <PageLayout footer={<BottomBar />}>
       <S.NewsPage>
-        <S.Back src="/svgs/back.svg" onClick={() => { }} />
+        <S.Back src="/svgs/back.svg" onClick={() => navigate('/')} />
         <S.NewsContents>
           <S.Badge>속보</S.Badge>
           <S.NewsTitle $color={titleColor}>bad은 빨강, good은 파랑으로 됩니다.</S.NewsTitle>
