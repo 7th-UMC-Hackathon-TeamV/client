@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { HomePage, LoginPage, NewsPage, UpdateNewsPage } from "./pages";
+import { HomePage, LoginPage, NewsPage, UpdateNewsPage, MyPage } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/update-news",
         element: <UpdateNewsPage />,
+      },
+      {
+        path: "/mypage",
+        element: <MyPage />,
       },
     ],
   },
