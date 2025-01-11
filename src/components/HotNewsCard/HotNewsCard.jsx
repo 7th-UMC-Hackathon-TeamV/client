@@ -5,7 +5,7 @@ const HotNewsCard = ({ title, type, backgroundImage }) => {
   if (!title && !type && !backgroundImage) {
     return (
       <S.EmptyContainer>
-        <S.EmptyMessage>휑...</S.EmptyMessage>
+        <S.EmptyMessage>당신의 뉴스를 들려주세요</S.EmptyMessage>
       </S.EmptyContainer>
     );
   }
