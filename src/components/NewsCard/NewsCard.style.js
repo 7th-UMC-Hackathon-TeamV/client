@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PageContainer = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ export const PageContainer = styled.div`
 
 export const CardListWrapper = styled.div`
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 100%;
 `;
 
@@ -40,7 +40,7 @@ export const TitleBox = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-`
+`;
 
 export const Title = styled.p`
   color: white;
@@ -51,12 +51,11 @@ export const Title = styled.p`
   margin-top: 6px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 `;
 
-
 export const Type = styled.div`
-  background: ${({ type }) => type === 'True' ? '#E22c2f' : '#18309F'};
+  background: ${({ type }) => (type === "True" ? "#E22c2f" : "#18309F")};
   width: 18px;
   height: 100%;
   margin-right: 15px;

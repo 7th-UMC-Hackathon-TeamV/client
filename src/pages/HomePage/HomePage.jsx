@@ -1,7 +1,11 @@
-import { BottomBar, NewsAlertBox, PageLayout } from "../../components";
-import { NewsHeader } from "../../components/NewsHeader";
-import HotNewsCard from "../../components/NewsCard/HotNewsCard";
-import NewsCardList from "../../components/NewsCard/NewsCardList";
+import {
+  BottomBar,
+  NewsAlertBox,
+  PageLayout,
+  NewsHeader,
+  HotNewsCard,
+  NewsCardList,
+} from "../../components";
 import * as S from "./HomePage.style";
 
 const HomePage = () => {
@@ -27,7 +31,7 @@ const HomePage = () => {
 
           <S.NewsSection>
             <NewsHeader title="어제의 온에어" />
-            {/* <NewsCardList /> */}
+            <NewsCardList />
           </S.NewsSection>
         </S.NewsSectionWrapper>
       </S.HomePage>
