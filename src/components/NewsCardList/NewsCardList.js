@@ -1,5 +1,4 @@
-import React from "react";
-import * as S from "./NewsCard.style.js";
+import * as S from "./NewsCardList.style.js";
 import { NewsCard } from "../../components";
 
 const NewsCardList = () => {
@@ -27,18 +26,16 @@ const NewsCardList = () => {
   ];
 
   return (
-    <S.PageContainer>
-      <S.CardListWrapper>
-        {newsData.map((news, index) => (
-          <NewsCard
-            key={index}
-            title={news.title}
-            type={news.type}
-            backgroundImage={news.backgroundImage}
-          />
-        ))}
-      </S.CardListWrapper>
-    </S.PageContainer>
+    <S.CardListWrapper>
+      {newsData.map((news, index) => (
+        <NewsCard
+          key={index}
+          title={news.title}
+          type={news.type}
+          backgroundImage={news.backgroundImage}
+        />
+      ))}
+    </S.CardListWrapper>
   );
 };
 
