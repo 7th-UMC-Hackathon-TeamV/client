@@ -43,7 +43,7 @@ export const NewsTitle = styled.p`
 `
 
 export const NewsImage = styled.img`
-  height: 160px;
+  width: 100%;
   margin-top: 16px;
 `
 

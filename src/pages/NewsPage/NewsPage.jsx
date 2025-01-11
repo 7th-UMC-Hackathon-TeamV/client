@@ -28,7 +28,7 @@ const NewsPage = () => {
         <S.NewsContents>
           <S.Badge>속보</S.Badge>
           <S.NewsTitle $color={titleColor}>bad은 빨강, good은 파랑으로 됩니다.</S.NewsTitle>
-          <S.NewsImage src="/svgs/likeon.svg"/>
+          <S.NewsImage src="https://cdn.pixabay.com/photo/2022/03/10/15/13/clouds-7060045_1280.jpg"/>
           <S.NewsDetail>
             본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문
           </S.NewsDetail>
