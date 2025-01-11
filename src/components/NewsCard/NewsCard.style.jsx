@@ -8,7 +8,7 @@ export const NewsCard = styled.div`
 
 export const CardContainer = styled.div`
   position: relative;
-  width: 85%;  
+  width: 85%;
   height: 160px;
   background: #dfdfdf;
   border-radius: 8px;
@@ -21,6 +21,24 @@ export const CardContainer = styled.div`
   background-position: center;
   border-radius: 8px;
   cursor: pointer; 
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 배경을 어둡게 하는 반투명 오버레이 */
+    border-radius: 8px;
+    z-index: 1;
+  }
+
+  /* 내부 요소들이 오버레이 위로 보이도록 설정 */
+  * {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -49,7 +67,7 @@ export const TitleBox = styled.div`
 export const Title = styled.p`
   color: white;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 800;
   margin-top: 3px;
   white-space: nowrap;
   overflow: hidden;
