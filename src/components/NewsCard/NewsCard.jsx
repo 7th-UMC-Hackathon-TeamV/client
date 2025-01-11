@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./NewsCard.style";
 
-
 const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false }) => {
 
   const handleDeleteButton = () => {
@@ -17,6 +16,7 @@ const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false }) => 
           backgroundPosition: 'center'
         }}
       >
+  
         {hasDeleteButton && <S.XButton src='/svgs/x.svg' onClick={() => handleDeleteButton()}/>}
         <S.TitleWrapper>
           <S.Type type={type}></S.Type>
