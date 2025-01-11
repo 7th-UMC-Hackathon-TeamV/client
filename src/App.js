@@ -1,11 +1,12 @@
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
+import { GlobalStyle } from "./styles";
 
 function App() {
   return (
     <>
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
       <RouterProvider router={router} />
     </>
   );
