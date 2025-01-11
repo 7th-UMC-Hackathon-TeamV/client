@@ -15,7 +15,24 @@ export const HotCardContainer = styled.div`
   border-radius: 8px;
   display: flex;
   position: relative;
-  cursor: pointer; 
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 배경을 어둡게 하는 반투명 오버레이 */
+    border-radius: 8px;
+    z-index: 1;
+  }
+
+  /* 내부 요소들이 오버레이 위로 보이도록 설정 */
+  * {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 export const HotIcon = styled.div`
@@ -29,6 +46,8 @@ export const HotIcon = styled.div`
   position: absolute;
   top: 15px;
   left: 20px;
+
+  
 `;
 
 export const HOTLabel = styled.p`
