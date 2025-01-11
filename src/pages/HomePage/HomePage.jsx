@@ -14,9 +14,9 @@ const HomePage = () => {
   const USER_ID_LIST = ["v0111", "v0132", "올라"];
 
   const hotNewsData = [
-    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "True", backgroundImage: "image1.jpg" },
-    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "False", backgroundImage: "image2.jpg" },
-    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "True", backgroundImage: "image3.jpg" },
+    { title: "V팀, 무박 2일 코딩 중...", type: "True", backgroundImage: "https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg" },
+    { title: "V팀, 저녁 메뉴 족발인 것으로 밝혀져...", type: "False", backgroundImage: "https://static.hubzum.zumst.com/hubzum/2019/07/26/11/8291a05e16b14e9b91eedc7a4375c934_780x585.jpg" },
+    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "True", backgroundImage: "https://theindigo.co.kr/wp-content/uploads/2020/12/%EC%A0%84%EC%B2%A001.jpg" },
   ];
 
   const sliderSettings = {
