@@ -18,22 +18,28 @@ const UpdateNewsPage = () => {
           maxLength={20}
         />
         <S.ImageUploadArea />
-        <S.ButtonWrapper>
-          <S.BadButton
-            isInactive={selected !== null && selected !== "bad"}
-            isSelected={selected === "bad"}
-            onClick={() => handleButtonClick("bad")}
-          >
-            bad:(
-          </S.BadButton>
-          <S.GoodButton
-            isInactive={selected !== null && selected !== "good"}
-            isSelected={selected === "good"}
-            onClick={() => handleButtonClick("good")}
-          >
-            good:)
-          </S.GoodButton>
-        </S.ButtonWrapper>
+
+        <S.ButtonSelector>
+          <S.ButtonDescription>
+            *뉴스의 분위기를 체크해주세요.
+          </S.ButtonDescription>
+          <S.ButtonWrapper>
+            <S.BadButton
+              isInactive={selected !== null && selected !== "bad"}
+              isSelected={selected === "bad"}
+              onClick={() => handleButtonClick("bad")}
+            >
+              bad:(
+            </S.BadButton>
+            <S.GoodButton
+              isInactive={selected !== null && selected !== "good"}
+              isSelected={selected === "good"}
+              onClick={() => handleButtonClick("good")}
+            >
+              good:)
+            </S.GoodButton>
+          </S.ButtonWrapper>
+        </S.ButtonSelector>
         <S.ContentInput
           placeholder="본문을 입력하세요. (최대 1000자)"
           maxLength={1000}

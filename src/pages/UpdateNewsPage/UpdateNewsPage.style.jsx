@@ -40,6 +40,19 @@ export const ImageUploadArea = styled.div`
   align-items: center;
 `;
 
+export const ButtonSelector = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
+  line-height: 150%;
+`;
+
+export const ButtonDescription = styled.span`
+  display: flex;
+  color: var(--Gray-400, #a8a8a8);
+`;
+
 export const ButtonWrapper = styled.div`
   display: flex;
   gap: 8px;
