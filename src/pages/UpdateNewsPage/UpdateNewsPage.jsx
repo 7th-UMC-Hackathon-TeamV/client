@@ -12,7 +12,10 @@ const UpdateNewsPage = () => {
   return (
     <PageLayout footer={<BottomBar />}>
       <S.UpdateNewsPage>
-        <S.Badge>속보!</S.Badge>
+        <S.HotNewsWrapper>
+          <img src="/svgs/icon-inactive-check-box.svg" alt="check icon" />
+          <S.Badge>속보 여부</S.Badge>
+        </S.HotNewsWrapper>
         <S.TitleInput
           placeholder="제목을 입력하세요. (20자 이내)"
           maxLength={20}

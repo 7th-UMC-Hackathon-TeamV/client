@@ -7,14 +7,19 @@ export const UpdateNewsPage = styled.div`
   padding: 16px;
 `;
 
+export const HotNewsWrapper = styled.div`
+  display: flex;
+`;
+
 export const Badge = styled.div`
-  background-color: #d3d3d3;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Gray-500, #222);
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   padding: 4px 8px;
   border-radius: 12px;
-  width: fit-content;
 `;
 
 export const TitleInput = styled.input`
