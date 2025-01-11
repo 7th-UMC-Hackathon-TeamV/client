@@ -24,7 +24,7 @@ const NewsPage = () => {
   return (
     <PageLayout footer={<BottomBar />}>
       <S.NewsPage>
-        <S.Back src="/svgs/back.svg" onClick={() => navigate('/')} />
+        <S.Back src="/svgs/back.svg" onClick={() => navigate('/home')} />
         <S.NewsContents>
           <S.Badge>속보</S.Badge>
           <S.NewsTitle $color={titleColor}>bad은 빨강, good은 파랑으로 됩니다.</S.NewsTitle>

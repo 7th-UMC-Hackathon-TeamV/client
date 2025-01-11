@@ -6,7 +6,7 @@ const BottomBar = () => {
 
   return (
     <S.BottomBar>
-      <S.ContentWrapper onClick={() => navigator("/")}>
+      <S.ContentWrapper onClick={() => navigator("/home")}>
         <S.ContentIcon src="/svgs/home.svg" />
         <S.ContentText>홈</S.ContentText>
       </S.ContentWrapper>
