@@ -9,13 +9,7 @@ const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false }) => 
 
   return (
     <S.PageContainer>
-      <S.CardContainer
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
+      <S.CardContainer backgroundImage={backgroundImage}>
         {hasDeleteButton && <S.XButton src='/svgs/x.svg' onClick={() => handleDeleteButton()}/>}
         <S.TitleWrapper>
           <S.Type type={type}></S.Type>
