@@ -29,7 +29,6 @@ export const Ellipse = styled.img`
 
 export const InputDiv = styled.div`
   display: flex;
-  width: 328px;
   height: 48px;
   border-radius: 10px;
   border: 1px solid var(--gray-300);
@@ -62,7 +61,6 @@ export const TextNum = styled.p`
 
 export const LoginButton = styled.button`
   height: 40px;
-  width: 328px;
   background-color: var(--gray-500);
   border-radius: 8px;
 
