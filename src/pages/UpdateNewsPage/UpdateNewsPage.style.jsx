@@ -36,13 +36,14 @@ export const TitleInput = styled.input`
 `;
 
 export const ImageUploadArea = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 150px;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 8px;
 `;
 
 export const ButtonSelector = styled.div`
@@ -86,7 +87,6 @@ export const GoodButton = styled.button`
 `;
 
 export const ContentInput = styled.textarea`
-  width: 100%;
   height: 200px;
   padding: 8px;
   font-size: 14px;

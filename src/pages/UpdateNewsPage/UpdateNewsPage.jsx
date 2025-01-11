@@ -4,16 +4,28 @@ import * as S from "./UpdateNewsPage.style";
 
 const UpdateNewsPage = () => {
   const [selected, setSelected] = useState(null);
+  const [isHotNews, setIsHotNews] = useState(false);
 
   const handleButtonClick = (type) => {
     setSelected(type);
   };
 
+  const toggleHotNews = () => {
+    setIsHotNews((prev) => !prev);
+  };
+
   return (
     <PageLayout footer={<BottomBar />}>
       <S.UpdateNewsPage>
-        <S.HotNewsWrapper>
-          <img src="/svgs/icon-inactive-check-box.svg" alt="check icon" />
+        <S.HotNewsWrapper onClick={toggleHotNews}>
+          <img
+            src={
+              isHotNews
+                ? "/svgs/icon-active-check-box.svg"
+                : "/svgs/icon-inactive-check-box.svg"
+            }
+            alt="check icon"
+          />
           <S.Badge>속보 여부</S.Badge>
         </S.HotNewsWrapper>
         <S.TitleInput
