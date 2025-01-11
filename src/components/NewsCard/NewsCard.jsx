@@ -1,7 +1,10 @@
 import React from "react";
 import * as S from "./NewsCard.style";
+import { useParams, useNavigate } from 'react-router-dom';
 
-const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false }) => {
+const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false, newsId=1324 }) => {
+  const { groupKey } = useParams();
+  const navigate = useNavigate();
 
   const handleDeleteButton = () => {
     console.log('delete');
@@ -15,6 +18,7 @@ const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false }) => 
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
+        onClick={() => navigate(`/news/${groupKey}/${newsId}/`)}
       >
   
         {hasDeleteButton && <S.XButton src='/svgs/x.svg' onClick={() => handleDeleteButton()}/>}

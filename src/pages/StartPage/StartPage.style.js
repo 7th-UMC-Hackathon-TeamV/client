@@ -9,7 +9,7 @@ export const ButtonContainer = styled.div`
   position: fixed;
   bottom: 40px;
   left: 50%;
-  width: 450px;
+  width: 90%;
   height: 50px;
   transform: translateX(-50%);
   border-radius: 15px;
@@ -17,6 +17,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 520px;
 
   button {
     width: 100%;
@@ -41,3 +42,4 @@ export const ContentWrapper = styled.div`
   line-height: 1.4;
 `;
 
+export const Description = styled.div``;

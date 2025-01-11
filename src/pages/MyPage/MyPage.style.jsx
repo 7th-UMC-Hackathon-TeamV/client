@@ -38,6 +38,8 @@ export const CardList = styled.div`
   flex-direction: column;
 
   margin: 10px 0;
+
+  gap: 16px;
 `
 
 export const CardBox = styled.div`

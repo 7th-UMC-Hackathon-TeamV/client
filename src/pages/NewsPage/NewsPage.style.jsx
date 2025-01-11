@@ -16,6 +16,7 @@ export const Back = styled.img`
 export const NewsContents = styled.div`
   width: 100%; 
   margin-top: 80px;
+  margin-bottom: 20px;
 `
 
 export const Badge = styled.div`
@@ -38,12 +39,18 @@ export const NewsTitle = styled.p`
   font-weight: 700;
   height: 24px;
 
-  margin-top: 16px;
+  margin-top: 10px;
   color: ${props => props.$color};
 `
 
+export const UserId = styled.p`
+  margin-top: 14px;
+  color: var(--gray-400);
+  font-size: 13px;
+`
+
 export const NewsImage = styled.img`
-  height: 160px;
+  width: 100%;
   margin-top: 16px;
 `
 

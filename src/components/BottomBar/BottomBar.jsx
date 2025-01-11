@@ -1,12 +1,10 @@
 import * as S from "./BottomBar.style";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const BottomBar = () => {
   const navigator = useNavigate();
 
   const { groupKey } = useParams();
-
-  console.log(groupKey)
 
   return (
     <S.BottomBar>

@@ -1,3 +1,4 @@
+import { useNavigate, useParams } from "react-router-dom";
 import {
   BottomBar,
   PageLayout,
@@ -5,13 +6,24 @@ import {
   LogoHeader,
 } from "../../components";
 import * as S from "./LoginPage.style";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const LoginPage = () => {
   const [disabled, setDisabled] = useState(true);
-
   const [id, setId] = useState("");
   const [passwd, setPasswd] = useState("");
+
+  const { groupKey } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (id.length > 0 && passwd.length > 0){
+      setDisabled(false);
+    }
+    else{
+      setDisabled(true);
+    }
+  }, [id, passwd])
 
   return (
     <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
@@ -34,6 +46,7 @@ const LoginPage = () => {
           <S.InputDiv>
             <S.Input
               maxLength="20"
+              type="password"
               placeholder="비밀번호를 입력하세요."
               value={passwd}
               onChange={(e) => setPasswd(e.target.value)}
@@ -41,7 +54,7 @@ const LoginPage = () => {
             <S.TextNum>{passwd.length}/20</S.TextNum>
           </S.InputDiv>
           <S.Gap $gap={"16px"} />
-          <S.LoginButton disabled={disabled}>로그인</S.LoginButton>
+          <S.LoginButton disabled={disabled} onClick={() => navigate(`/mypage/${groupKey}`)}>로그인</S.LoginButton>
         </S.InputWrapper>
       </S.LoginPage>
     </PageLayout>
