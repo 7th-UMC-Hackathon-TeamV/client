@@ -1,7 +1,11 @@
 import React from "react";
 import * as S from "./HotNewsCard.style.jsx";
+import { useNavigate, useParams } from 'react-router-dom';
 
-const HotNewsCard = ({ title, type, backgroundImage }) => {
+const HotNewsCard = ({ title, type, backgroundImage, newsId=1324 }) => {
+  const { groupKey } = useParams();
+  const navigate = useNavigate();
+
   if (!title && !type && !backgroundImage) {
     return (
       <S.EmptyContainer>
@@ -18,6 +22,7 @@ const HotNewsCard = ({ title, type, backgroundImage }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        onClick={() => navigate(`/news/${groupKey}/${newsId}/`)}
       >
         <S.HotIcon>
           <S.HOTLabel>속보!</S.HOTLabel>

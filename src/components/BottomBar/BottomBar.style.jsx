@@ -4,6 +4,7 @@ export const BottomBar = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
+  height: 82px;
 `;
 
 export const ContentWrapper = styled.button`
@@ -13,12 +14,12 @@ export const ContentWrapper = styled.button`
   align-items: center;
   padding: 10px 20px;
   gap: 4px;
-  flex: 1;
+  color: ${props => props.$color || `var(--gray-400)`};
 `;
 
 export const ContentIcon = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 `;
 
 export const ContentText = styled.p`
