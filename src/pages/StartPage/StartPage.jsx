@@ -6,6 +6,15 @@ import { useNavigate } from "react-router-dom";
 const StartPage = () => {
   const navigator = useNavigate();
 
+  const getGroupKey = async () => {
+    const response = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/api/random-group`, {
+      method: 'POST',
+    })
+    const data = await response.json()
+
+    navigator(`/${data.result}`)
+  }
+
   return (
     <PageLayout header={<LogoHeader />}>
       <S.StartPage>
@@ -14,7 +23,7 @@ const StartPage = () => {
         </S.ContentWrapper>
         <S.Description></S.Description>
         <S.ButtonContainer>
-          <button onClick={() => navigator("/home")}>온에어 시작하기</button>
+          <button onClick={() => getGroupKey()}>온에어 시작하기</button>
         </S.ButtonContainer>
       </S.StartPage>
     </PageLayout>
