@@ -62,6 +62,7 @@ export const TextNum = styled.p`
 
 export const LoginButton = styled.button`
   height: 40px;
+  width: 328px;
   background-color: var(--gray-500);
   border-radius: 8px;
 
@@ -71,5 +72,6 @@ export const LoginButton = styled.button`
 
   &:disabled{
     background-color: var(--gray-300);
+    color: var(--gray-400);
   }
 `
