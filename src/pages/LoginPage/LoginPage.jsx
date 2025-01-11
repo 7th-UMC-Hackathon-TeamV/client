@@ -1,4 +1,4 @@
-import { BottomBar, PageLayout, LogoHeader } from "../../components";
+import { BottomBar, PageLayout, LogoHeader, NewsHeader } from "../../components";
 import * as S from "./LoginPage.style";
 import { useState } from "react";
 
