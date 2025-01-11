@@ -9,27 +9,28 @@ const HomePage = () => {
 
   return (
     <PageLayout footer={<BottomBar />}>
-      <S.HomePage>홈페이지</S.HomePage>
-      <S.NewsSectionWrapper>
-        <S.NewsSection>
+      <S.HomePage>
+        <S.NewsAlertBox>
           <NewsHeader title="On Air Box" />
           <S.NewsAlertBoxWrapper>
             {USER_ID_LIST.map((userId, index) => (
               <NewsAlertBox key={index} userId={userId} />
             ))}
           </S.NewsAlertBoxWrapper>
-        </S.NewsSection>
+        </S.NewsAlertBox>
 
-        <S.NewsSection>
-          <NewsHeader title="어제의 핫! 온에어" />
-          <HotNewsCard />
-        </S.NewsSection>
+        <S.NewsSectionWrapper>
+          <S.NewsSection>
+            <NewsHeader title="어제의 핫! 온에어" />
+            <HotNewsCard />
+          </S.NewsSection>
 
-        <S.NewsSection>
-          <NewsHeader title="어제의 온에어" />
-          <NewsCardList />
-        </S.NewsSection>
-      </S.NewsSectionWrapper>
+          <S.NewsSection>
+            <NewsHeader title="어제의 온에어" />
+            {/* <NewsCardList /> */}
+          </S.NewsSection>
+        </S.NewsSectionWrapper>
+      </S.HomePage>
     </PageLayout>
   );
 };
