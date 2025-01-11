@@ -15,9 +15,9 @@ const HomePage = () => {
   const USER_ID_LIST = ["v0111", "v0132", "올라"]; 
 
   const hotNewsData = [
-    { title: "News 1", type: "Type A", backgroundImage: "image1.jpg" },
-    { title: "News 2", type: "Type B", backgroundImage: "image2.jpg" },
-    { title: "News 3", type: "Type C", backgroundImage: "image3.jpg" },
+    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "True", backgroundImage: "image1.jpg" },
+    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "False", backgroundImage: "image2.jpg" },
+    { title: "위니, 끝내 동역사에서 4호선 갈아타기 실패… 하나 더 기다려  “극대노”", type: "True", backgroundImage: "image3.jpg" },
   ];
 
 
