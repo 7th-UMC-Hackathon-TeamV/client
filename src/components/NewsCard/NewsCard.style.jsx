@@ -47,9 +47,9 @@ export const TitleBox = styled.div`
 
 export const Title = styled.p`
   color: white;
-  font-size: 24px;
-  font-weight: 800;
-  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 3px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

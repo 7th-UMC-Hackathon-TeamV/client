@@ -1,9 +1,13 @@
+<<<<<<< HEAD
+import { BottomBar, PageLayout, NewsHeader, LogoHeader } from "../../components";
+=======
 import {
   BottomBar,
   PageLayout,
   LogoHeader,
   NewsHeader,
 } from "../../components";
+>>>>>>> 2f59cdd9f0bb1f5c292266f0bd20a32146e3399e
 import * as S from "./LoginPage.style";
 import { useState } from "react";
 

@@ -26,7 +26,7 @@ export const HotIcon = styled.div`
   border-radius: 20px;
   background: #222222;
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 20px;
 `;
 
@@ -55,11 +55,12 @@ export const HotTitleBox = styled.div`
 
 export const HotTitle = styled.p`
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 800;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 10px;
 `;
 
 export const HotType = styled.div`
