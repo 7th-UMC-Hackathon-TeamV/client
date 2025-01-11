@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PageContainer = styled.div`
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -17,8 +17,7 @@ export const HotCardContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   position: relative;
-  margin-top: 50px;
-
+  /* margin-top: 50px; */
 `;
 
 export const HotIcon = styled.div`
@@ -59,7 +58,7 @@ export const HotTitleBox = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-`
+`;
 
 export const HotTitle = styled.p`
   color: white;
@@ -70,12 +69,11 @@ export const HotTitle = styled.p`
   margin-top: 16px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 `;
 
-
 export const HotType = styled.div`
-  background: ${({ type }) => type === 'True' ? '#E22c2f' : '#18309F'};
+  background: ${({ type }) => (type === "True" ? "#E22c2f" : "#18309F")};
   width: 18px;
   height: 100%;
   margin-right: 15px;

@@ -1,29 +1,23 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const PageContainer = styled.div`
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
+export const NewsCard = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-`;
-
-export const CardListWrapper = styled.div`
-  display: flex;
-  flex-direction: column; 
   width: 100%;
 `;
 
 export const CardContainer = styled.div`
-  width: 85%;
-  height: 75%;
-  background: #dfdfdf;
-  border-radius: 8px;
   display: flex;
   justify-content: flex-start;
   position: relative;
-  margin-top: -30px;
+  width: 85%;
+  height: 160px;
+  padding: 8px;
+  background: #dfdfdf;
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
 `;
 
 export const TitleWrapper = styled.div`
@@ -35,29 +29,26 @@ export const TitleWrapper = styled.div`
   bottom: 20px;
 `;
 
+export const Type = styled.div`
+  background: ${({ type }) => (type === "True" ? "#E22c2f" : "#18309F")};
+  width: 18px;
+  height: 100%;
+  margin-right: 15px;
+`;
+
 export const TitleBox = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
   overflow: hidden;
-`
+`;
 
 export const Title = styled.p`
   color: white;
   font-size: 24px;
   font-weight: 800;
-  justify-content: center;
-  align-items: center;
   margin-top: 6px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
-`;
-
-
-export const Type = styled.div`
-  background: ${({ type }) => type === 'True' ? '#E22c2f' : '#18309F'};
-  width: 18px;
-  height: 100%;
-  margin-right: 15px;
+  text-overflow: ellipsis;
 `;

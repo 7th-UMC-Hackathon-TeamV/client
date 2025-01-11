@@ -55,7 +55,7 @@ export const onAirStyles = css`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    padding-bottom: 70px;
     margin: 0 auto;
     overscroll-behavior-y: contain;
 
