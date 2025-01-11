@@ -5,6 +5,7 @@ import * as S from "./UpdateNewsPage.style";
 const UpdateNewsPage = () => {
   const [selected, setSelected] = useState(null);
   const [isHotNews, setIsHotNews] = useState(false);
+  const [uploadedImage, setUploadedImage] = useState(null); // 업로드된 이미지 상태 관리
 
   const handleButtonClick = (type) => {
     setSelected(type);
@@ -12,6 +13,17 @@ const UpdateNewsPage = () => {
 
   const toggleHotNews = () => {
     setIsHotNews((prev) => !prev);
+  };
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setUploadedImage(reader.result); // 업로드된 이미지를 상태로 저장
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
@@ -32,8 +44,21 @@ const UpdateNewsPage = () => {
           placeholder="제목을 입력하세요. (20자 이내)"
           maxLength={20}
         />
-        <S.ImageUploadArea />
-
+        <S.ImageUploadArea>
+          {uploadedImage ? (
+            <S.ImagePreview src={uploadedImage} alt="Uploaded Preview" />
+          ) : (
+            <S.UploadLabel>
+              이미지 업로드
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                style={{ display: "none" }}
+              />
+            </S.UploadLabel>
+          )}
+        </S.ImageUploadArea>
         <S.ButtonSelector>
           <S.ButtonDescription>
             *뉴스의 분위기를 체크해주세요.

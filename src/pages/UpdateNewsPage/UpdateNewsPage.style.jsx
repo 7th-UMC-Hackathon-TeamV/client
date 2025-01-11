@@ -36,13 +36,33 @@ export const TitleInput = styled.input`
 `;
 
 export const ImageUploadArea = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 150px;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+`;
+
+export const UploadLabel = styled.label`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+`;
+
+export const ImagePreview = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
   border-radius: 8px;
 `;
 
