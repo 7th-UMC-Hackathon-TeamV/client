@@ -1,34 +1,55 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { HomePage, LoginPage, NewsPage, UpdateNewsPage, MyPage, StartPage } from "./pages";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <StartPage />,
+  },
+  {
+    path: ":groupKey",
+    element: <HomePage />,
+  },
+  {
+    path: "login",
     children: [
       {
-        path: "/",
-        element: <StartPage />,
-      },
+        path: ":groupKey",
+        element: <LoginPage />,    
+      }
+    ]
+  },
+  {
+    path: "news",
+    children: [
       {
-        path: "/home",
-        element: <HomePage />,
-      },
+        path: ":groupKey",
+        children: [
+          {
+            path: ":newsId",
+            element: <NewsPage />,
+          },
+        ],
+      }
+    ]
+  },
+  {
+    path: "update-news",
+    children: [
       {
-        path: "/login",
-        element: <LoginPage />,
-      },
+        path: ":groupKey",
+        element: <UpdateNewsPage />,        
+      }
+    ]
+  },
+  {
+    path: "mypage",
+    children: [
       {
-        path: "/news",
-        element: <NewsPage />,
-      },
-      {
-        path: "/update-news",
-        element: <UpdateNewsPage />,
-      },
-      {
-        path: "/mypage",
+        path: ":groupKey",
         element: <MyPage />,
-      },
-    ],
+      }
+    ]
   },
 ]);
 
