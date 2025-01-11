@@ -6,7 +6,43 @@ react, javascript, styled-component, npm
 
 ## 컨벤션
 
-### Commit
+### [ Issue ]
+
+- 태그 종류
+
+```
+feat: 기능 추가
+fix: 에러 수정, 버그 수정
+docs: README, 문서
+modify: 코드 수정 (기능의 변화가 있을 때)
+chore: 그 외 작업 내용
+```
+
+<br />
+
+- Issue 제목
+
+```js
+커밋 타입: 커밋 내용
+
+// 예시
+feat: 회원가입 구현
+```
+
+<br />
+
+### [ 브랜치 네이밍 ]
+
+```
+기능타입/#이슈번호-기능이름(kebab-case)
+
+// 예시
+feat/#12-nav-bar
+```
+
+<br>
+
+### [ Commit ]
 
 - feat: 새로운 기능 추가
 - fix: 버그 수정 또는 typo
@@ -24,16 +60,7 @@ react, javascript, styled-component, npm
 기능타입/기능이름(kebab-case)
 
 // 예시
-feat/nav-bar
-```
-
-### 브랜치 **네이밍**
-
-```
-기능타입/기능이름(kebab-case)
-
-// 예시
-feat/nav-bar
+feat: nav-bar
 ```
 
 <br>
