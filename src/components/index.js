@@ -1,1 +1,2 @@
-export { BottomBar } from "./BottomBar";
+export { default as BottomBar } from "./BottomBar/BottomBar";
+export { default as PageLayout } from "./PageLayout/PageLayout";
