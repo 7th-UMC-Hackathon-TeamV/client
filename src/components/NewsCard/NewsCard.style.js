@@ -16,6 +16,7 @@ export const CardListWrapper = styled.div`
 `;
 
 export const CardContainer = styled.div`
+  position: relative;
   width: 85%;
   height: 75%;
   background: #dfdfdf;
@@ -61,3 +62,11 @@ export const Type = styled.div`
   height: 100%;
   margin-right: 15px;
 `;
+
+export const XButton = styled.img`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+`
