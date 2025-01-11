@@ -12,11 +12,13 @@ export const NewsSectionWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   gap: 24px;
+  margin-top: 5px;
 `;
 
 export const NewsAlertBox = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 `;
 
 export const NewsSection = styled.div`

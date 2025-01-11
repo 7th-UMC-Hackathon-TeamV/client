@@ -4,6 +4,7 @@ export const NewsHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 8px 16px;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.h2`
