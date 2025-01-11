@@ -9,8 +9,8 @@ const NewsCard = ({ title, type, backgroundImage, hasDeleteButton = false }) => 
   }
 
   return (
-    <S.NewsCard>
-      <S.CardContainer
+<S.NewsCard>
+    <S.CardContainer
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
