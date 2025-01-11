@@ -20,6 +20,7 @@ export const CardContainer = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: 8px;
+  cursor: pointer; 
 `;
 
 export const TitleWrapper = styled.div`

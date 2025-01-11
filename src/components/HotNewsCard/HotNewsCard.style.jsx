@@ -15,6 +15,7 @@ export const HotCardContainer = styled.div`
   border-radius: 8px;
   display: flex;
   position: relative;
+  cursor: pointer; 
 `;
 
 export const HotIcon = styled.div`
