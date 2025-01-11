@@ -27,8 +27,9 @@ const NewsPage = () => {
         <S.Back src="/svgs/back.svg" onClick={() => navigate('/home')} />
         <S.NewsContents>
           <S.Badge>속보</S.Badge>
-          <S.NewsTitle $color={titleColor}>bad은 빨강, good은 파랑으로 됩니다.</S.NewsTitle>
-          <S.NewsImage src="https://cdn.pixabay.com/photo/2022/03/10/15/13/clouds-7060045_1280.jpg"/>
+          <S.UserId>위니</S.UserId>
+          <S.NewsTitle $color={titleColor}>V팀, 무박 2일 코딩 중...</S.NewsTitle>
+          <S.NewsImage src="https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg"/>
           <S.NewsDetail>
             본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문
           </S.NewsDetail>
