@@ -1,5 +1,5 @@
 import { PageLayout } from "../../components";
-import { LogoHeader } from "../../components/";
+import { LogoHeader } from "../../components";
 import * as S from "./StartPage.style";
 import { useNavigate } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import { BottomBar, PageLayout } from "../../components";
+import { BottomBar, PageLayout, LogoHeader } from "../../components";
 import * as S from "./LoginPage.style";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ const LoginPage = () => {
 
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.LoginPage>
       <S.LoginTitleWrapper>
         <S.LoginTitle>

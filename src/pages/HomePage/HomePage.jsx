@@ -6,6 +6,7 @@ import {
   NewsHeader,
   HotNewsCard,
   NewsCardList,
+  LogoHeader
 } from "../../components";
 import * as S from "./HomePage.style";
 import Slider from "react-slick";
@@ -29,7 +30,7 @@ const HomePage = () => {
   };
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.HomePage>
         <S.NewsAlertBox>
           <NewsHeader title="On Air Box" />

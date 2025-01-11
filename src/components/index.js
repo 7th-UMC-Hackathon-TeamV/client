@@ -5,3 +5,4 @@ export { default as NewsCard } from "./NewsCard/NewsCard";
 export { default as NewsCardList } from "./NewsCardList/NewsCardList";
 export { default as HotNewsCard } from "./HotNewsCard/HotNewsCard";
 export { default as NewsHeader } from "./NewsHeader/NewsHeader";
+export { default as LogoHeader } from "./LogoHeader/LogoHeader";

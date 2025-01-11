@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BottomBar, PageLayout } from "../../components";
+import { BottomBar, PageLayout, LogoHeader } from "../../components";
 import * as S from "./UpdateNewsPage.style";
 
 const UpdateNewsPage = () => {
@@ -32,7 +32,7 @@ const UpdateNewsPage = () => {
     title.trim() && uploadedImage && selected && content.trim();
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.UpdateNewsPage>
         <S.HotNewsWrapper onClick={toggleHotNews}>
           <img

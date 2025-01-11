@@ -1,4 +1,4 @@
-import { BottomBar, PageLayout } from "../../components";
+import { BottomBar, PageLayout,LogoHeader } from "../../components";
 import * as S from "./MyPage.style";
 import { useState } from "react";
 import NewsCard from '../../components/NewsCard/NewsCard';
@@ -13,7 +13,7 @@ const MyPage = () => {
   const imgurl = 'https://cdn.pixabay.com/photo/2022/03/10/15/13/clouds-7060045_1280.jpg'
 
   return (
-    <PageLayout footer={<BottomBar />}>
+    <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
       <S.MyPage>
         <S.Gap $gap={'80px'}/>
         <S.PageTitleWrapper>
