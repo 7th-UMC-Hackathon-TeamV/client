@@ -27,7 +27,6 @@ export const InputDiv = styled.div`
   border-radius: 10px;
   border: 1px solid var(--gray-300);
   align-content: center;
-  padding: 0 16px;
 `;
 
 export const Gap = styled.div`
