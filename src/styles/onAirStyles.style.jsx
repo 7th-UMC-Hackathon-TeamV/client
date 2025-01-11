@@ -75,6 +75,9 @@ export const onAirStyles = css`
     --gray-400: #a8a8a8;
     --gray-500: #222222;
 
+    --Red-500: #e22c2f;
+    --Blue-500: #18309f;
+
     /* Font Sizes */
     --font-title-20: 20px;
     --font-title-18: 18px;
