@@ -17,18 +17,6 @@ export const Badge = styled.div`
   width: fit-content;
 `;
 
-export const InputLabel = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #999;
-`;
-
-export const CharacterLimit = styled.span`
-  font-size: 12px;
-  color: #ccc;
-`;
-
 export const TitleInput = styled.input`
   width: 100%;
   padding: 8px;
@@ -58,7 +46,8 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const BadButton = styled.button`
-  background: var(--Red-500);
+  background-color: ${(props) =>
+    props.isSelected ? "#E22C2F" : props.isInactive ? "#f5a5a5" : "#f5a5a5"};
   color: #fff;
   font-size: 14px;
   padding: 8px 16px;
@@ -68,7 +57,8 @@ export const BadButton = styled.button`
 `;
 
 export const GoodButton = styled.button`
-  background: var(--Blue-500);
+  background-color: ${(props) =>
+    props.isSelected ? "#18309F" : props.isInactive ? "#a0c4e8" : "#a0c4e8"};
   color: #fff;
   font-size: 14px;
   padding: 8px 16px;
@@ -96,8 +86,8 @@ export const SubmitButton = styled.button`
   padding: 12px;
   font-size: 16px;
   color: #fff;
-  background-color: #ccc;
+  background-color: ${(props) => (props.isActive ? "#0275d8" : "#ccc")};
   border: none;
   border-radius: 8px;
-  cursor: not-allowed;
+  cursor: ${(props) => (props.isActive ? "pointer" : "not-allowed")};
 `;

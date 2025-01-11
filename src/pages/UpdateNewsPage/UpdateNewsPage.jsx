@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { BottomBar, PageLayout } from "../../components";
 import * as S from "./UpdateNewsPage.style";
 
 const UpdateNewsPage = () => {
+  const [selected, setSelected] = useState(null);
+
+  const handleButtonClick = (type) => {
+    setSelected(type);
+  };
+
   return (
     <PageLayout footer={<BottomBar />}>
       <S.UpdateNewsPage>
@@ -12,14 +19,26 @@ const UpdateNewsPage = () => {
         />
         <S.ImageUploadArea />
         <S.ButtonWrapper>
-          <S.BadButton>bad:(</S.BadButton>
-          <S.GoodButton>good:)</S.GoodButton>
+          <S.BadButton
+            isInactive={selected !== null && selected !== "bad"}
+            isSelected={selected === "bad"}
+            onClick={() => handleButtonClick("bad")}
+          >
+            bad:(
+          </S.BadButton>
+          <S.GoodButton
+            isInactive={selected !== null && selected !== "good"}
+            isSelected={selected === "good"}
+            onClick={() => handleButtonClick("good")}
+          >
+            good:)
+          </S.GoodButton>
         </S.ButtonWrapper>
         <S.ContentInput
           placeholder="본문을 입력하세요. (최대 1000자)"
           maxLength={1000}
         />
-        <S.SubmitButton disabled>게시 예약하기</S.SubmitButton>
+        <S.SubmitButton isActive={!!selected}>게시 예약하기</S.SubmitButton>
       </S.UpdateNewsPage>
     </PageLayout>
   );
