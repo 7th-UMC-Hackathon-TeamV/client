@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BottomBar, PageLayout, LogoHeader } from "../../components";
 import * as S from "./UpdateNewsPage.style";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from 'axios';
 
 const UpdateNewsPage = () => {
   const [selected, setSelected] = useState(null);
@@ -8,6 +10,27 @@ const UpdateNewsPage = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [isFormComplete, setIsFormComplete] = useState(false);
+
+  const navigator = useNavigate();
+  const { groupKey } = useParams();
+
+  const username = localStorage.getItem('username');
+
+  useEffect(() => {
+    if(username === null){
+      navigator(`/login/${groupKey}`);
+    }
+  })
+
+  useEffect(() => {
+    if(!!!selected || !!!title || !!!content || !!!uploadedImage){
+      setIsFormComplete(false)
+    }
+    else{
+      setIsFormComplete(true)
+    }
+  }, [selected, title, content, uploadedImage])
 
   const handleButtonClick = (type) => {
     setSelected(type);
@@ -28,12 +51,13 @@ const UpdateNewsPage = () => {
     }
   };
 
-  const isFormComplete =
-    title.trim() && uploadedImage && selected && content.trim();
+  const handleSubmit = async (formData) => {
+
+  }
 
   return (
     <PageLayout header={<LogoHeader />} footer={<BottomBar />}>
-      <S.UpdateNewsPage>
+      <S.UpdateNewsPage action={handleSubmit}>
         <S.HotNewsWrapper onClick={toggleHotNews}>
           <img
             src={
@@ -59,6 +83,7 @@ const UpdateNewsPage = () => {
                 이미지 변경
                 <input
                   type="file"
+                  name="file"
                   accept="image/*"
                   onChange={handleImageUpload}
                   style={{ display: "none" }}
@@ -70,6 +95,8 @@ const UpdateNewsPage = () => {
               이미지 업로드
               <input
                 type="file"
+                name="file"
+                id="file"
                 accept="image/*"
                 onChange={handleImageUpload}
                 style={{ display: "none" }}
@@ -92,7 +119,7 @@ const UpdateNewsPage = () => {
             <S.GoodButton
               isInactive={selected !== null && selected !== "good"}
               isSelected={selected === "good"}
-              onClick={() => handleButtonClick("good")}
+              onClick={() => handleButtonClick("godo")}
             >
               good:)
             </S.GoodButton>
@@ -104,7 +131,7 @@ const UpdateNewsPage = () => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <S.SubmitButton isActive={isFormComplete}>게시 예약하기</S.SubmitButton>
+        <S.SubmitButton type="submit" disabled={!isFormComplete}>게시 예약하기</S.SubmitButton>
       </S.UpdateNewsPage>
     </PageLayout>
   );
