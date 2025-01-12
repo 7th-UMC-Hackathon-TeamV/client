@@ -1,8 +1,22 @@
 import { BottomBar, PageLayout, LogoHeader } from "../../components";
 import * as S from "./MyPage.style";
 import NewsCard from '../../components/NewsCard/NewsCard';
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const MyPage = () => {
+
+  const navigator = useNavigate();
+  const { groupKey } = useParams();
+
+  const username = localStorage.getItem('username');
+
+  useEffect(() => {
+    console.log(username)
+    if(username === null){
+      navigator(`/login/${groupKey}`);
+    }
+  })
 
   const mockNewsData1 = [
     {

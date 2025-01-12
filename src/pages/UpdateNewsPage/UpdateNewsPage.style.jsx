@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const UpdateNewsPage = styled.div`
+export const UpdateNewsPage = styled.form`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -96,7 +96,7 @@ export const ButtonWrapper = styled.div`
   gap: 8px;
 `;
 
-export const BadButton = styled.button`
+export const BadButton = styled.div`
   background-color: ${(props) =>
     props.isSelected ? "#E22C2F" : props.isInactive ? "#f5a5a5" : "#f5a5a5"};
   color: #fff;
@@ -107,7 +107,7 @@ export const BadButton = styled.button`
   cursor: pointer;
 `;
 
-export const GoodButton = styled.button`
+export const GoodButton = styled.div`
   background-color: ${(props) =>
     props.isSelected ? "#18309F" : props.isInactive ? "#a0c4e8" : "#a0c4e8"};
   color: #fff;

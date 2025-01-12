@@ -18,7 +18,7 @@ const BottomBar = () => {
         <S.ContentText>작성</S.ContentText>
       </S.ContentWrapper>
 
-      <S.ContentWrapper onClick={() => navigator(`/login/${groupKey}`)}>
+      <S.ContentWrapper onClick={() => navigator(`/mypage/${groupKey}`)}>
         <S.ContentIcon src="/svgs/user.svg" />
         <S.ContentText>마이페이지</S.ContentText>
       </S.ContentWrapper>
